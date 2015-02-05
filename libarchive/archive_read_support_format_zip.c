@@ -119,7 +119,7 @@ struct trad_enc_ctx {
 #define LA_USED_ZIP64	(1 << 0)
 #define LA_FROM_CENTRAL_DIRECTORY (1 << 1)
 
-/* 
+/*
  * See "WinZip - AES Encryption Information"
  *     http://www.winzip.com/aes_info.htm
  */
@@ -2440,9 +2440,9 @@ static int
 cmp_key(const struct archive_rb_node *n, const void *key)
 {
 	const struct zip_entry *e = (const struct zip_entry *)n;
-	if (e->local_header_offset > *(int64_t *)key)
+	if (e->local_header_offset > *(const int64_t *)key)
 		return -1;
-	if (e->local_header_offset < *(int64_t *)key)
+	if (e->local_header_offset < *(const int64_t *)key)
 		return 1;
 	return 0;
 }
