@@ -1617,9 +1617,9 @@ IF(ENABLE_TEST)
 ENDIF(ENABLE_TEST)
 
 add_subdirectory(libarchive)
-add_subdirectory(cat)
-add_subdirectory(tar)
-add_subdirectory(cpio)
+#add_subdirectory(cat)
+#add_subdirectory(tar)
+#add_subdirectory(cpio)
 
 get_directory_property(HAS_PARENT_SCOPE PARENT_DIRECTORY)
 if(HAS_PARENT_SCOPE)

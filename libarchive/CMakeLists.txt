@@ -211,4 +211,4 @@ INSTALL(TARGETS archive archive_static
 INSTALL_MAN(${libarchive_MANS})
 INSTALL(FILES ${include_HEADERS} DESTINATION include)
 
-add_subdirectory(test)
+#add_subdirectory(test)
